@@ -1,0 +1,15 @@
+.about-me-item {
+    margin-bottom: 50px;
+}
+
+.about-me-item img {
+    width: 500px;
+}
+
+.about-me-item p {
+    display: inline-block;
+    width: 500px;
+    margin-left: 20px;
+    vertical-align: middle;
+    text-align: left;
+}
