@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use App\Shared\ApplicationParams;
+use App\Shared\MyCustomParams;
 use Yiisoft\Aliases\Aliases;
 use Yiisoft\Assets\AssetManager;
 use Yiisoft\Definitions\Reference;
@@ -12,6 +13,8 @@ use Yiisoft\Yii\View\Renderer\CsrfViewInjection;
 
 return [
     'application' => require __DIR__ . '/application.php',
+
+    'myCustomParams' => require __DIR__ . '/my-custom-params.php',
 
     'yiisoft/aliases' => [
         'aliases' => require __DIR__ . '/aliases.php',
@@ -25,6 +28,7 @@ return [
             'aliases' => Reference::to(Aliases::class),
             'urlGenerator' => Reference::to(UrlGeneratorInterface::class),
             'currentRoute' => Reference::to(CurrentRoute::class),
+            'myCustomParams' => Reference::to(MyCustomParams::class),
         ],
     ],
 
