@@ -15,4 +15,12 @@ final class HomePageCest
         $I->expectTo('see page home.');
         $I->see('Hello!');
     }
+
+    public function aboutMeButton(WebTester $I): void {
+        $I->wantTo('home page\'s about me button works');
+        $I->amOnPage('/');
+        $I->expectTo('go to the about me page from the home page');
+        $I->click('About Me');
+        $I->seeCurrentUrlEquals('/about-me');
+    }
 }
